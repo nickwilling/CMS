@@ -1,11 +1,12 @@
 package com.qdu.pojo;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class Course {
+public class Course implements Serializable{
 	private int courseId;
 	private String courseName;
 	private String courseType;
@@ -104,7 +105,6 @@ public class Course {
 
 	public void setTeacher(Teacher teacher) {
 		this.teacher = teacher;
-		System.out.println(teacher.getTeacherMobile());
 	}
 
 	public List<StudentInfo> getStudentInfo() {
@@ -123,17 +123,6 @@ public class Course {
 	public void setClazz(List<Clazz> clazz) {
 		this.clazz = clazz;
 	}
- 
-//	@Override
-//	public String toString() {
-//		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", courseType=" + courseType
-//				+ ", classCapacity=" + classCapacity + ", startTime=" + startTime + ", endTime=" + endTime
-//				+ ", currentYear=" + currentYear + ", schoolTem=" + schoolTem + ", qrImg=" + qrImg + ", student="
-//				+ student + ", clazz=" + clazz + ", teacher=" + teacher + ", studentInfo=" + studentInfo + "]";
-//	}
 
-
-
-	
 
 }

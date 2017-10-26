@@ -42,5 +42,17 @@ public class ClazzServiceImpl implements ClazzService{
 	public void updateClazzByCourseId(int clazzId) {
 		clazzDaoImpl.updateClazzByCourseId(clazzId);
 	}
+	@Override
+	public void updateClazzByClazzId(int clazzId,String clazzName) {
+		clazzDaoImpl.updateClazzByClazzId(clazzId, clazzName);
+	}
+	@Override
+	public Clazz selectClazzById(int clazzId) {
+		return clazzDaoImpl.selectClazzById(clazzId);
+	}
+	@Override
+	public void deleteClazzById(int clazzId) {
+		clazzDaoImpl.deleteClazzById(clazzId);
+	}
 
 }

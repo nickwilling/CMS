@@ -17,4 +17,10 @@ public interface ClazzDao {
 	public List<Clazz> clazzListByClazzId(int courseId);
 	
 	public void updateClazzByCourseId(int clazzId);
+	
+	public void updateClazzByClazzId(int clazzId,String clazzName);
+	
+	public Clazz selectClazzById(int clazzId);
+	
+	public void deleteClazzById(int clazzId);
 }
